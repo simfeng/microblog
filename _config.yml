@@ -1,71 +1,42 @@
 # Site settings
-title: PHOTORAMA
-email: ""
-description: "Photo Journal"
-url: "http://simfeng.github.io"
-baseurl: /microblog
-instagram_username: ""
-github_username:  ""
-deviantart_username: ""
-flickr_username: ""
-discus_shortname: ""
-share: true
+description: A blog about lorem ipsum dolor sit amet
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "http://simfeng.github.io" # the base hostname & protocol for your site e.g. http://willianjusten.com.br
 
-# Owner/author information
-owner:
-  name:   "photorama"
-  avatar: avatar.png
-  favicon: favicon.ico
-  description: "Photo Journal"
-
-# Settings for comments helper
-# Set 'provider' to the comment provider you want to use. (i.e.  Disqus, Intense Debate, livefyre, or Facebook Comments)
-# Set 'provider' to false to turn commenting off globally.
-#Set 'provider: false' to disable comments globally.
-# Disable comments for individual pages/posts by specifying 'comments: false' in the page/post YAML Front Matter.
-#
-comments :
-  provider : disqus
-  disqus :
-    short_name : ""
-
-# Internal nav
-nav:
- journal: "baseurl/journal/"
- gallery: "baseurl/gallery/"
- about: "baseurl/about/"
-
-# All translation keys
-translations:
- # 404.html
-  permalink: "/404.html"
-
-# Server
-destination:      	 ./_site
-port:             	 4000
-
+# User settings
+username: Lorem Ipsum
+user_description: Anon Developer at Lorem Ipsum Dolor
+user_title: Anon Developer
+email: anon@anon.com
+twitter_username: lorem_ipsum
+github_username:  lorem_ipsum
+gplus_username:  lorem_ipsum
+disqus_username: lorem_ipsum
 
 # Build settings
 markdown: kramdown
 highlighter: rouge
-permalink: pretty
-paginate: 5
-paginate_path: "/journal/page:num/"
-permalink: "/journal/:title/"
-categories_path: "/journal/category/"
-tags_path: "/journal/tag/"
-gems: 
- - jekyll-paginate
-exclude: ["less","node_modules","Gruntfile.js","package.json","README.md"]
+permalink: /:title/
 
-# SiteMap
-sitemap:
-    file: "/sitemap.xml"
-    exclude:
-        - "/atom.xml"
-        - "/feed.xml"
-        - "/feed/index.xml"
-    include_posts:
-        - "/writing/"
-    change_frequency_name: "change_frequency"
-    priority_name: "priority"
+
+# html minify
+compress_html:
+  clippings: all
+  comments: all
+  endings: []
+  profile: false
+
+# Links to include in menu navigation
+# For external links add external: true
+links:
+  - title: Home
+    url: /
+  - title: Series
+    url: /series
+  - title: Tags
+    url: /tags
+  - title: About Me
+    url: /about
+
+# exclude my node related stuff
+exclude: ['package.json', 'src', 'node_modules']

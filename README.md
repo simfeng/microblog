@@ -1,96 +1,128 @@
-p h o t o r a m a 
-====================
+## Cards Jekyll Template - [Demo](http://willianjusten.com.br/cards-jekyll-template)
 
-![photorama](https://raw.githubusercontent.com/sunbliss/photorama/gh-pages/photorama_thumb.gif)
+![Screenshot](screenshot.png)
+
+This is a simple and minimalist template for Jekyll designed for developers that want to write blog posts but don't want to care about frontend stuff.
+
+The Theme features:
+
+- Gulp
+- Stylus (Jeet, Rupture, Kouto Swiss)
+- Live Search
+- Offcanvas Menu
+- SVG icons
+- Very very small and fast!
+- Shell Script to create posts
+- Tags page
+- Series page
+- About Me page
+- Feed RSS
+- Sitemap.xml
+- Color Customization
+- Info Customization
+
+## Basic Setup
+
+1. [Install Jekyll](http://jekyllrb.com)
+2. Fork the [Cards Jekyll Template](https://github.com/willianjusten/cards-jekyll-template/fork)
+3. Clone the repo you just forked.
+4. Edit `_config.yml` to personalize your site.
+5. Check out the sample posts in `_posts` to see examples for assigning categories and tags, and other YAML data.
+6. Read the documentation below for further customization pointers and documentation.
+7. **Remember to compile your assets files with Gulp.**
+
+## Site and User Settings
+
+You have to fill some informations on `_config.yml` to customize your site.
+
+```
+# Site settings
+description: A blog about lorem ipsum dolor sit amet
+baseurl: "" # the subpath of your site, e.g. /blog/ or empty.
+url: "http://localhost:3000" # the base hostname & protocol for your site 
+
+# User settings
+username: Lorem Ipsum
+user_description: Anon Developer at Lorem Ipsum Dolor
+user_title: Anon Developer
+email: anon@anon.com
+twitter_username: lorem_ipsum
+github_username:  lorem_ipsum
+gplus_username:  lorem_ipsum
+disqus_username: lorem_ipsum
+```
+
+## Header Name
+
+To use the power of CSS Content and media query, the header name is defined on [src/styl/_header.styl](). Change to your prefered name.
+
+## Color customization
+
+All color variables are in `src/styl/variable`. To change the main color, just set the new value at `main` assignment. Another colors are for texts and the code background color.
+
+## Theme Colors
+
+Every post has a main color that is defined on [src/styl/_theme-colors.styl](). Just create a new color with the prefix `post-` and define your main-class: 'css' and color: '#2DA0C3' on every post you create.
+
+## Creating posts
+
+You can use the `initpost.sh` to create your new posts. Just follow the command:
+
+```
+./initpost.sh -c Post Title
+```
+
+The new file will be created at `_posts` with this format `date-title.md`.
+
+## Front-matter 
+
+When you create a new post, you need to fill the post information in the front-matter, follow this example:
+
+```
+---
+layout: post
+title: "Falando sobre RSCSS"
+date: 2016-02-07 18:48:16
+image: '/assets/img/rscss/rscss.png'
+description: 'Escrevendo CSS sem perder a sanidade. Aprenda uma metodologia que pode salvar muitas dores de cabeça.'
+main-class: 'css'
+color: '#2DA0C3'
+tags:
+- css
+- metodologia
+- frontend
+categories:
+twitter_text: 'Escrevendo CSS sem perder a sanidade.'
+introduction: 'Escrevendo CSS sem perder a sanidade. Com essa introdução, Rico St. Cruz o criador chama a atenção de todos sobre uma metodologia melhor para se escrever CSS.'
+---
+```
+
+## Running the blog in local
+
+In order to compile the assets and run Jekyll on local you need to follow those steps:
+
+- Install [NodeJS](https://nodejs.org/)
+- Run `npm install`
+- Run `npm install -g gulp gulp-cli` (maybe you need to use `sudo` command)
+- Run `gulp`
+
+## Windows 10 Step
+
+If you use Windows 10, change this line on [gulpfile.js](https://github.com/willianjusten/will-jekyll-template/blob/gh-pages/gulpfile.js#L23) to `spawn('jekyll.bat', ['build'])`.
+
+## Questions
+
+Having a problem getting something to work or want to know why I setup something in a certain way? Ping me on Twitter [@willian_justen](https://twitter.com/willian_justen) or file a [GitHub Issue](https://github.com/willianjusten/will-jekyll-template/issues/new).
 
 
-![Speed Test](https://raw.githubusercontent.com/sunbliss/photorama/gh-pages/Website%20Speed%20Test.png)
+## Donation
 
-----------
+If you liked my work, buy me a coffee <3
 
----> [DEMO](http://sunbliss.github.io/photorama/ "DEMO")  <---
+[![paypal](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=UTMFZUHX6EUGE)
 
-----------
+## License
 
-A theme for **jekyll**. 
+This theme is free and open source software, distributed under the The MIT License. So feel free to use this Jekyll theme on your site without linking back to me or using a disclaimer.
 
-Created for gh-pages (project page).
-
-This template was crafted having in mind the photobloggers.
-
-It uses [Clean Blog](https://github.com/BlackrockDigital/startbootstrap-clean-blog-jekyll "Clean Blog") as its basis.
-
-----------
-
- **IMPORTANT!!!**
-================
-
-###Before you begin: Change the URL and the BASEURL in the _config.yml
-
-The **URL** should say `http://yourusername.github.io`
-
-The **BASEURL** should say `/repositoryname`
-
-If there are problems with loading assets like CSS files and images, make sure that both **URL** and **BASEURL** are set correctly!!! 
-
-----------
-
-If you want to use your **own domain** go to the root of your project's repository, create a CNAME file and add a line with your domain name, e.g. `www.yourdomain.com`.
-
-Go to your domain name registrar and add a CNAME record pointing your domain to GitHub Pages:
-- type: CNAME
-- host: www.yourdomainname.com
-- answer: yourusername.github.io/repositoryname
-- TTL: 300
-
-----------
-
-Usage
-============ 
-
-###Quick Start
-
-1. [Fork this repository](https://github.com/sunbliss/photorama/fork) to get started. 
-2. Go to `https://github.com/yourusername/photorama/settings`
-3. Rename the repository to your new project, e.g. *myphotoblog*
-2. Create a new branch called `gh-pages` in your repository. 
-3. Go to the branches directory at `https://github.com/yourusername/repositoryname/branches` and *change* **default branch** to **gh-pages**.
-4. Delete **master** branch. 
-3. GitHub will build your site automatically and publish it at `http://yourusername.github.io/repositoryname/`.  
-
-----------
-
-- The homepage welcomes the visitors with 3 animated photos of your choice. It is recommended that all three are landscape orientated for best view.
-
-To change the welcome content at the far left of the Home page go here: `/index.html`
-
-----------
-
-- To enable **disqus** comments in the posts, change their front matter for comments to 'true'.
-
-You must have a registered account in disqus, where you will also register a forum for your website.
-
-Find the line `s.src = '//yourproject.disqus.com/embed.js';  // ` in the disqus_comments.html and REPLACE 'yourproject' with your forum shortname.
-
-----------
-
-- In order to send **newsletters** about your posts to your subscribers, you should register an account in [tinyletter](http://www.tinyletter.com " tinyletter").
-
-Find the line `'https://tinyletter.com/yourproject', ` in the *newsletter.html* and replace 'yourproject' with your registered website.
-
-You can always ommit the newsletter rendering by deleting the line `{% include newsletter.html %}
-` in the *default.html* layout.
-
-----------
-
-If you want to use the matching **NEWSLETTER** template, you must always create a new file  by copying its respective index.html and renaming it to e.g. 2016-March-newsletter.html and then save it inside the folder and the accompanying images inside the 'images folder', so it can be accessed to your viewers through their browser. In this case the root url for the above newsletter will be ***http://yourgithubusername.github.io/yourproject/2016-March-newsletter.html***. Copy this link and replace this part of the code `http://www.yoursite.com/newsletter/year-month-newsletter` with it.
-
-----------
-
-**TAGS** and **CATEGORIES** of the posts 
-
-When you add a tag or a category name in the front matter of a post, don't forget to add the responding markdown files in /journal/tag/ folder and in /journal/category folder, so they can always render when browsing the journal or searching in the respective page.
-
-----------
-
-I hope you will find it useful for your projects, photographic or not.
+If you’d like to give me credit somewhere on your blog or tweet a shout out to [@willian_justen](https://twitter.com/willian_justen), that would be pretty sweet.

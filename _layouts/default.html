@@ -1,24 +1,16 @@
+---
+layout: compress
+---
+
 <!DOCTYPE html>
-<html lang="en">
-
-{% include head.html %}
-
-<head>
-{% if page.url == "/404.html" %}<meta http-equiv="refresh" content="5; url={{ site.baseurl }}/journal" />{% endif %}
-</head>
-
-<body>
-
-    {% include nav.html %}
-
-    {{ content }}
-
-    {% include newsletter.html %}
-
-    {% include footer.html %}
-
-   {% include Scroll_to_Top.html %}
-
-</body>
-
+<html lang="en" itemscope itemtype="http://schema.org/WebPage" {% if page.main-class %}class="post-{{ page.main-class }}"{% endif %}>
+    {% include head.html %}
+    <body>
+        {% include svg-icons.html %}
+        {% include header-default.html %}
+            <section class="content">
+                {{ content }}
+            </section>
+        {% include footer.html %}
+    </body>
 </html>
