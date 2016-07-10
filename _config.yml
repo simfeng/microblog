@@ -5,13 +5,13 @@ url: "http://unclepi.me" # the base hostname & protocol for your site e.g. http:
 
 # User settings
 username: Uncle Pi
-user_description: lalaalaalallaalall
+user_description: 先别看aboutme,还没改
 user_title: 皮叔
 email: zq.feng@outlook.com
-twitter_username: zhengquan
+twitter_username: fengzhengquan
 github_username:  simfeng
-gplus_username:  zhengquan
-disqus_username: 
+gplus_username:  zhengquan Feng
+disqus_username: unclepipi
 
 # Build settings
 markdown: kramdown
