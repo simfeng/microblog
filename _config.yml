@@ -5,7 +5,7 @@ url: "http://unclepi.me" # the base hostname & protocol for your site e.g. http:
 
 # User settings
 username: Uncle Pi
-user_description: 先别看aboutme,还没改
+user_description: 
 user_title: 皮叔
 email: zq.feng@outlook.com
 twitter_username: fengzhengquan
@@ -35,8 +35,8 @@ links:
     url: /series
   - title: Tags
     url: /tags
-  - title: About Me
-    url: /about
+  # - title: About Me
+  #   url: /about
 
 # exclude my node related stuff
 exclude: ['package.json', 'src', 'node_modules']
