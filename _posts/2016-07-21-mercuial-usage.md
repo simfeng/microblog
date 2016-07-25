@@ -88,8 +88,20 @@ Step 3: update working directory with pulled changset
 
 #### 关于hg merge的一些理解
 
-每次修改文件都会创建一个新的head， 就算是没有commit也会出现。   
 head 切换、关闭 http://stackoverflow.com/questions/3688263/mercurial-beheading-a-head
+每次commit 之后， head的值都会变化， parent 也会变化   
+
+    changeset:   13:c6d5da9cd061
+    tag:         tip
+    parent:      10:f6270b506eac
+    parent:      9:6c5926c93911
+    user:        Feng Zhengquan
+    date:        Sun Jul 24 17:44:46 2016 +0800
+    summary:     merge
+
+如上所示， head是13， parent是10， 当我们push的时候，如果
+
+
 
 #### 5. New branch
 
