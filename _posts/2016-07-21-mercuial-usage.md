@@ -72,7 +72,7 @@ if got anyquestion about config, try to solve it by
 
     $ hg help config
 
-#### 6. Update source
+#### 5. Update source
 
 Step 1: list changsets from source
 
@@ -85,6 +85,20 @@ Step 2: check-in new changsets from source or other repository
 Step 3: update working directory with pulled changset
 
     $ hg update 
+
+#### 6. resolve conflicts
+
+step 1: Merge change across branch and notify merge confilcts
+
+    $ hg merge 
+
+step 2: Try to remerge unresolved files
+
+    $ hg resolve [-a] [files] # -a=try all unresolved
+
+step 3: Show all branch heads or heads of speified revision
+
+    $ hg heads [-r Rev]
 
 #### 关于hg merge的一些理解
 
