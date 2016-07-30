@@ -12,6 +12,7 @@ twitter_text:
 introduction:
 ---
 
+## Part 1.  Main Process
 
 #### 1. Create new [Repository](http://translate.google.cn/#en/zh-CN/repository)
 
@@ -139,33 +140,61 @@ show diff or files files between changesets(default current against tip)
 
 #### 9. commit your change
 
+List changesets to destination
+
+    $ hg outgoing
+
+create a new changeset in local repository
+
     $ hg commit [-A] [-u 'name <email>']
     # -A: auto addremove
 
+#### 10. push new changeset
 
-#### 5. New branch
+    $ hg push
+
+#### 11. show commit log
+
+    $ hg log [-r Rev[:toRev]] [-p]
+    # show changesets(-p=with diff)
+
+show the latest changset
+ 
+
+    $ hg tip
+    # hg log -r tip
+
+## Part 2. Branches Manage
+
+#### 1. New branch
 
 create new branch with command
 
     $ hg branch new-branch-name
+    $ hg commit -m "new branch"
+
+push new branch
+    
+    $ hg push --new-branch
+
+when use `hg push -f`, mercurial will  __inactive__ current branch and push new branch, so, recommend `hg push --new-branch`
 
 show all branches with command 
 
     $ hg branches
 
 
-#### 关于hg merge的一些理解
+show current branch
 
-head 切换、关闭 http://stackoverflow.com/questions/3688263/mercurial-beheading-a-head
-每次commit 之后， head的值都会变化， parent 也会变化   
+    $ hg branch
 
-    changeset:   13:c6d5da9cd061
-    tag:         tip
-    parent:      10:f6270b506eac
-    parent:      9:6c5926c93911
-    user:        Feng Zhengquan
-    date:        Sun Jul 24 17:44:46 2016 +0800
-    summary:     merge
+#### 4. switch branch
 
-如上所示， head是13， parent是10， 当我们push的时候，如果
+    $ hg update branchname
+
+#### 5. merge branch
+
+    $ hg merge branchname
+    # merge in changeset from another branch
+
 
