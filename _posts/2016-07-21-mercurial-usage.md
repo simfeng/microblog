@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "mercuial usage"
+title: "mercurial usage"
 date: 2016-07-21 13:54:26
 image: '/assets/img/'
 description:
@@ -68,7 +68,7 @@ if the local repo is from `hg init`, we may need to touch it.
 
 then, start to edit it.
 
-if got anyquestion about config, try to solve it by
+if got any question about config, try to solve it by
 
     $ hg help config
 
@@ -100,6 +100,60 @@ step 3: Show all branch heads or heads of speified revision
 
     $ hg heads [-r Rev]
 
+#### 7. modify
+
+now you can edit your file    
+
+- hg copy oldfile newfile
+- hg rename oldfile newfile
+- hg remove files
+- hg add [files]
+- hg addremove    
+    # automatic add and remove
+
+#### 8. show status
+
+step 1. show status
+
+    $ hg status
+
+    M 0724a
+    A newfile
+    R 0724b
+    ? newfile_not_hg_add
+    ! oldfile_not_hg_remove
+
+|status  |  explanation|
+|:--------:| :------------: |
+|A | new file|
+|M | modify |
+|R | remove file|
+|？ | new file not hg add yet |
+|！| delete file not hg remove yet|
+
+step 2. show difference
+
+show diff or files files between changesets(default current against tip)
+
+    $ hg diff [-r RevA [-r RevB]] [files]
+
+#### 9. commit your change
+
+    $ hg commit [-A] [-u 'name <email>']
+    # -A: auto addremove
+
+
+#### 5. New branch
+
+create new branch with command
+
+    $ hg branch new-branch-name
+
+show all branches with command 
+
+    $ hg branches
+
+
 #### 关于hg merge的一些理解
 
 head 切换、关闭 http://stackoverflow.com/questions/3688263/mercurial-beheading-a-head
@@ -114,17 +168,4 @@ head 切换、关闭 http://stackoverflow.com/questions/3688263/mercurial-behead
     summary:     merge
 
 如上所示， head是13， parent是10， 当我们push的时候，如果
-
-
-
-#### 5. New branch
-
-create new branch with command
-
-    $ hg branch new-branch-name
-
-show all branches with command 
-
-    $ hg branches
-
 
