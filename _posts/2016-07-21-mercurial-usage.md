@@ -4,12 +4,14 @@ title: "mercurial usage"
 date: 2016-07-21 13:54:26
 image: '/assets/img/'
 description:
-main-class:
-color:
+main-class: "dev"
+color: '#EB7728'
 tags:
+- hg
+- mercurial
 categories:
 twitter_text:
-introduction:
+introduction: "introduce how to init, clone, modify, create, merge by mercurial, this just a process"
 ---
 
 ## Part 1.  Main Process
