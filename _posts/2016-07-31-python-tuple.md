@@ -4,7 +4,7 @@ title: "python tuple"
 date: 2016-07-31 14:01:50
 image: '/assets/img/'
 description:
-main-class:
+main-class: "dev"
 color:
 tags:
 - python
@@ -67,7 +67,7 @@ Tuple没有方法， so
 ### advantage
 
 1. Tuple is fast than list. 如果你定义了一个不需要增删改，只需要遍历的常量集， tuple是首选
-1. 可以对不需要修改的数据`写保护`, 使代码更安全。如果非得要改变这些值， 可以使用`list()`函数将tuple变成list，当然原有的tuple不会改变   
+2. 可以对不需要修改的数据`写保护`, 使代码更安全。如果非得要改变这些值， 可以使用`list()`函数将tuple变成list，当然原有的tuple不会改变   
 
 
         In [14]: l = list(tu) # tuple to list
@@ -88,17 +88,23 @@ Tuple没有方法， so
 
 __list's values in tuple can be changed__
 
-```
-In [46]: l
-Out[46]: [10, 4, 'dd', 0, True, False]
+        In [46]: l
+        Out[46]: [10, 4, 'dd', 0, True, False]
 
-In [47]: nt = (1, 3, l)
+        In [47]: nt = (1, 3, l)
 
-In [48]: nt
-Out[48]: (1, 3, [1, 4, 'dd', 0, True, False])
+        In [48]: nt
+        Out[48]: (1, 3, [1, 4, 'dd', 0, True, False])
 
-In [49]: nt[2][0]=10 # change list's first value
+        In [49]: nt[2][0]=10 # change list's first value
 
-In [50]: nt
-Out[50]: (1, 3, [10, 4, 'dd', 0, True, False])    
-```
+        In [50]: nt
+        Out[50]: (1, 3, [10, 4, 'dd', 0, True, False])    
+
+4. tuple可以用来格式化字符串
+
+
+        In [1]: s = "I'm %s , and I'm %d years old!"
+
+        In [2]: print s % ('Lily', 10)
+        I'm Lily , and I'm 10 years old!
