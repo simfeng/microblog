@@ -4,8 +4,8 @@ title: "python tuple"
 date: 2016-07-31 14:01:50
 image: '/assets/img/'
 description:
-main-class: "dev"
-color:
+main-class: "python"
+color: "#EB7728"
 tags:
 - python
 - tuple
