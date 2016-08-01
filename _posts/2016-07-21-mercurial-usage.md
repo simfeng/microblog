@@ -4,7 +4,7 @@ title: "mercurial usage"
 date: 2016-07-21 13:54:26
 image: '/assets/img/'
 description:
-main-class: "dev"
+main-class: "mercurial"
 color: '#EB7728'
 tags:
 - hg
@@ -199,4 +199,5 @@ show current branch
     $ hg merge branchname
     # merge in changeset from another branch
 
+![mercurial cheetset](/assets/img/mercurial_usage/hg.jpg)
 

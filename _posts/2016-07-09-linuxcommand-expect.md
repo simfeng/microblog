@@ -4,7 +4,7 @@ title: "linux-command expect"
 date: 2016-07-09 09:15:17
 image: '/assets/img/'
 description:
-main-class: "dev"
+main-class: "linux"
 color: 
 tags:
 - expect
