@@ -139,6 +139,10 @@ redis list是简单的 字符串 列表
 
 `del`命令还可以删除string， `del firstkey`
 
+----------------
+
+Next Part Coming Soon
+
 ### 2.3 Hash
 
 ### 2.4 Set
