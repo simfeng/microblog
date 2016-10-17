@@ -201,3 +201,7 @@ show current branch
 
 ![mercurial cheetset](/assets/img/mercurial_usage/hg.jpg)
 
+
+## Useful Links
+
+[25 Tips for Intermediate Mercurial Users](http://antonym.org/2010/04/25-tips-for-intermediate-mercurial-users.html)
