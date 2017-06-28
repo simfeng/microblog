@@ -2,4 +2,5 @@ _site
 *.bak
 .DS_Store
 dump.rdb
+.sass-cache
 
