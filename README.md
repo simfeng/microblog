@@ -1,128 +1,123 @@
-## Cards Jekyll Template - [Demo](http://willianjusten.com.br/cards-jekyll-template)
+# Harmony
 
-![Screenshot](screenshot.png)
+Harmony is a responsive jekyll theme. 
 
-This is a simple and minimalist template for Jekyll designed for developers that want to write blog posts but don't want to care about frontend stuff.
+- Built for jekyll 2.x
+- Supports Google analytics and RSS feeds
+- Sass based styles
+- Browser support: IE 8+, Chrome, Safari and Firefox 
+- Fluidly responsive 
 
-The Theme features:
+## Contents
 
-- Gulp
-- Stylus (Jeet, Rupture, Kouto Swiss)
-- Live Search
-- Offcanvas Menu
-- SVG icons
-- Very very small and fast!
-- Shell Script to create posts
-- Tags page
-- Series page
-- About Me page
-- Feed RSS
-- Sitemap.xml
-- Color Customization
-- Info Customization
+- [Harmony](#harmony)
+- [About Jekyll](#about-jekyll)
+- [How to install/run](#how-to-installrun)
+- [Options/Usage](#optionsusage)
+  - [Header navigation links](#header-navigation-links)
+  - [Footer links](#footer-links)
+  - [Copyrights/Disclaimer statements](#copyrightsdisclaimer-statements)
+- [Screenshots](#screenshots)
+- [Feedback/Bugs/Suggestions](#feedbackbugssuggestions)
+- [Version history](#version-history)
+- [License](#license)
 
-## Basic Setup
+## About jekyll 
 
-1. [Install Jekyll](http://jekyllrb.com)
-2. Fork the [Cards Jekyll Template](https://github.com/willianjusten/cards-jekyll-template/fork)
-3. Clone the repo you just forked.
-4. Edit `_config.yml` to personalize your site.
-5. Check out the sample posts in `_posts` to see examples for assigning categories and tags, and other YAML data.
-6. Read the documentation below for further customization pointers and documentation.
-7. **Remember to compile your assets files with Gulp.**
+[Jekyll](http://jekyllrb.com/) is a static site generator, an open-source tool for creating simple yet powerful websites of all shapes and sizes.
 
-## Site and User Settings
+## How to install/run
 
-You have to fill some informations on `_config.yml` to customize your site.
+1. [Fork](https://github.com/web-create/harmony/fork) this repository.
+2. Clone it: git clone https://github.com/YOUR-USERNAME/harmony.
+3. If you're completely new to jekyll, please read more about [Jekyll](http://jekyllrb.com/) and [Github pages](https://help.github.com/articles/using-jekyll-with-pages).
+4. Change your directory into cloned repository. 
+5. Run `bundle install`
+6. Edit the _config.yml on root directory. Change `url` property to to 
+`http://127.0.0.1:4000` since you are going to run on localhost.
+7. Run the jekyll server by having: `jekyll serve --baseurl ''` or `rake preview`   
 
-```
-# Site settings
-description: A blog about lorem ipsum dolor sit amet
-baseurl: "" # the subpath of your site, e.g. /blog/ or empty.
-url: "http://localhost:3000" # the base hostname & protocol for your site 
+Point your browser to [http://localhost:4000](http://localhost:4000).
 
-# User settings
-username: Lorem Ipsum
-user_description: Anon Developer at Lorem Ipsum Dolor
-user_title: Anon Developer
-email: anon@anon.com
-twitter_username: lorem_ipsum
-github_username:  lorem_ipsum
-gplus_username:  lorem_ipsum
-disqus_username: lorem_ipsum
-```
+Note: If you are a windows user please refer to this nice website - http://jekyll-windows.juthilo.com/ by Julian Thilo to configure ruby + jekyll on windows.
 
-## Header Name
+## Options/Usage
 
-To use the power of CSS Content and media query, the header name is defined on [src/styl/_header.styl](). Change to your prefered name.
+Harmony has some customizable options. All the configuration details are 
+configured in `_config.yml` file under root of the harmony directory. 
 
-## Color customization
+Feel free to change your `name`, `descriptionn`, `meta_description`, `author details`,
+`social media names` and `Google analytics id` accordingly. 
 
-All color variables are in `src/styl/variable`. To change the main color, just set the new value at `main` assignment. Another colors are for texts and the code background color.
+``` yml
+# Harmony theme configuration. Please change accordingly.
+harmony:
+  name: Harmony
+  # Little description about your site
+  description: Harmony is free responsive jekyll theme.
+  meta_description: Harmony is free responsive jekyll theme. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
+  basetheme: theme-base-01 # pre defined the{{ site.url | prepend: site.baseurl }}mes are darken, blue-water, reddish.
+  author: # Author details
+    name: Gayan Virajith
+    email: gayanvirajith@gmail.com
+    url: http://gayanvirajith.github.io
 
-## Theme Colors
+  # Google Analytics key, leave blank to ignore
+  google_analytics_key: UA-xxxx-x
 
-Every post has a main color that is defined on [src/styl/_theme-colors.styl](). Just create a new color with the prefix `post-` and define your main-class: 'css' and color: '#2DA0C3' on every post you create.
-
-## Creating posts
-
-You can use the `initpost.sh` to create your new posts. Just follow the command:
-
-```
-./initpost.sh -c Post Title
-```
-
-The new file will be created at `_posts` with this format `date-title.md`.
-
-## Front-matter 
-
-When you create a new post, you need to fill the post information in the front-matter, follow this example:
-
-```
----
-layout: post
-title: "Falando sobre RSCSS"
-date: 2016-02-07 18:48:16
-image: '/assets/img/rscss/rscss.png'
-description: 'Escrevendo CSS sem perder a sanidade. Aprenda uma metodologia que pode salvar muitas dores de cabeça.'
-main-class: 'css'
-color: '#2DA0C3'
-tags:
-- css
-- metodologia
-- frontend
-categories:
-twitter_text: 'Escrevendo CSS sem perder a sanidade.'
-introduction: 'Escrevendo CSS sem perder a sanidade. Com essa introdução, Rico St. Cruz o criador chama a atenção de todos sobre uma metodologia melhor para se escrever CSS.'
----
+  # Profile links, leave blank to ignore
+  social: 
+    github: gayanvirajith
+    twitter: gayanvirajith
+    facebook: gayanvirajith
+    gplus: +GayanVirajith
+    dribble: gayan
+    pinterest: 
+  # Toggle disclaimer in footer
+  show_disclaimer: true
 ```
 
-## Running the blog in local
+### Includes 
 
-In order to compile the assets and run Jekyll on local you need to follow those steps:
+All the partial includes are under `_includes` directory.
 
-- Install [NodeJS](https://nodejs.org/)
-- Run `npm install`
-- Run `npm install -g gulp gulp-cli` (maybe you need to use `sudo` command)
-- Run `gulp`
+#### Header navigation links
 
-## Windows 10 Step
+Feel free to add/edit links for your header in the file `header-links.html`.
 
-If you use Windows 10, change this line on [gulpfile.js](https://github.com/willianjusten/will-jekyll-template/blob/gh-pages/gulpfile.js#L23) to `spawn('jekyll.bat', ['build'])`.
+#### Footer links
 
-## Questions
+Customize your footer links by editing `_includes/footer-links.html`
 
-Having a problem getting something to work or want to know why I setup something in a certain way? Ping me on Twitter [@willian_justen](https://twitter.com/willian_justen) or file a [GitHub Issue](https://github.com/willianjusten/will-jekyll-template/issues/new).
+#### Copyrights/Disclaimer statements
 
+All copyright notes are under `_includes/footer.html`. Also note that you 
+can toggle on/off copyright notes from the front-end by setting up `show_disclaimer` 
+property in `_config.yml`. 
 
-## Donation
+### Screenshots
+![Home page screenshot](https://raw.githubusercontent.com/web-create/harmony/master/assets/css/images/harmony-web.jpg "Desktop screen")
 
-If you liked my work, buy me a coffee <3
+![Post page screenshot](https://raw.githubusercontent.com/web-create/harmony/master/assets/css/images/harmony-web-2.jpg "Post page screen-shot")
 
-[![paypal](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=UTMFZUHX6EUGE)
+![Blog archive page screenshot](https://raw.githubusercontent.com/web-create/harmony/master/assets/css/images/harmony-web-3.jpg "Blog archive page screen-shot")
+
+#### Feedback/Bugs/Suggestions 
+
+Please submit as an [issue](https://github.com/web-create/harmony/issues/new),
+I am happy to response back.
+
+Version history
+---------------
+
+| Version no. | Description  | Date |
+| --- | --- | --- |
+| 1.0 | Initial release | 9th September 2014 |
+| 1.0.1 | v1.0.1 with minor bug fix | 9th September 2014 |
+| 1.0.2 | v1.0.2 Optimize for Google | 24th October 2014 |
+
 
 ## License
 
-This theme is free and open source software, distributed under the The MIT License. So feel free to use this Jekyll theme on your site without linking back to me or using a disclaimer.
-
-If you’d like to give me credit somewhere on your blog or tweet a shout out to [@willian_justen](https://twitter.com/willian_justen), that would be pretty sweet.
+Free / Open sourced under the 
+[MIT](https://github.com/web-create/harmony/blob/master/LICENSE.md).

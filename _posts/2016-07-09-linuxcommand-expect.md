@@ -2,16 +2,10 @@
 layout: post
 title: "linux-command expect"
 date: 2016-07-09 09:15:17
-image: '/assets/img/'
 description:
-main-class: "linux"
-color: 
-tags:
+categories:
 - expect
 - linux command
-categories:
-twitter_text:
-introduction:
 ---
 
 项目部署过程中需要一个自动填充密码的功能，就想研究一下`expect`，本来想自己写一篇文章，后来查找资料的过程中看到了[果冻想](http://www.jellythink.com/)里的一片[文章](http://www.jellythink.com/archives/1470),觉得自己不可能写得比这个好了，于是就决定的抄过来，再加一些小东西。

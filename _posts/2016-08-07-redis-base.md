@@ -2,16 +2,10 @@
 layout: post
 title: "redis base"
 date: 2016-08-07 08:30:29
-image: '/assets/img/'
 description:
-main-class: "redis"
-color:
-tags:
+categories:
 - redis
 - database
-categories:
-twitter_text:
-introduction:
 ---
 
 ## 1. Install & Start

@@ -1,42 +1,64 @@
-# Site settings
-description: A blog about lorem ipsum dolor sit amet
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://unclepi.me" # the base hostname & protocol for your site e.g. http://willianjusten.com.br
+# Harmony Jekyll theme general configurations 
 
-# User settings
-username: Uncle Pi
-user_description: 
-user_title: 皮叔
-email: zq.feng@outlook.com
-twitter_username: fengzhengquan
-github_username:  simfeng
-gplus_username:  zhengquan Feng
-disqus_username: unclepipi
+# Base URL
+baseurl: ''
 
-# Build settings
-markdown: kramdown
-highlighter: rouge
-permalink: /:title/
+# Site live URL
+url: http://blog.unclepi.me
 
+# Localhost 
+# url: http://127.0.0.1:4000  
 
-# html minify
-compress_html:
-  clippings: all
-  comments: all
-  endings: []
-  profile: false
+# Harmony theme configuration. Please change accordingly.
+harmony:
+  name: uncle pi 
+  # Little description about your site
+  description: Hi, everyone, this is Uncle pi's skill Camp.
+  # 'meta_description:' Write an awesome description for your new site here.
+  # It will appear in your document head meta (for Google search results) and 
+  # in your feed.xml site description.
+  meta_description: > # 
+   Harmony is a free responsive jekyll theme by Gayan Virajith
+   and Maheshika Lakmali. Sourced on Github - 
+   https://github.com/gayanvirajith/harmony
+  basetheme: theme-base-01 # pre defined thmes are darken, blue-water, redish.
+  author: # Author details
+    name: Gayan Virajith
+    email: gayanvirajith@gmail.com
+    url: http://gayanvirajith.github.io
 
-# Links to include in menu navigation
-# For external links add external: true
-links:
-  - title: Home
-    url: /
-  - title: Series
-    url: /series
-  - title: Tags
-    url: /tags
-  # - title: About Me
-  #   url: /about
+  # Google Analytics key, leave blank to ignore
+  google_analytics_key: UA-xxxx-x
 
-# exclude my node related stuff
-exclude: ['package.json', 'src', 'node_modules']
+  # Profile links, leave blank to ignore
+  social: 
+    github: 
+    twitter: https://twitter.com/fengzhengquan
+    facebook: 
+    gplus: 
+    dribble: 
+    pinterest: 
+  # Toggle disclaimer in footer
+  show_disclaimer: true
+
+# Conversion / Build settings 
+markdown:    kramdown
+# This is how you put pygments config in jekyll 2.0 instead of pygments: true
+highlighter: pygments 
+
+# Permalinks
+permalink:        pretty
+
+exclude: 
+  - CNAME
+  - Gemfile
+  - Rakefile
+  - README.md
+  - .gitignore
+  - .sass-cache
+  - Gemfile.lock
+
+# Sass conversion configs
+sass:
+    sass_dir: assets/css/_sass
+    style: :compressed

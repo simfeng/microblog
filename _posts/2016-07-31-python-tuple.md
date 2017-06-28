@@ -2,16 +2,11 @@
 layout: post
 title: "python tuple"
 date: 2016-07-31 14:01:50
-image: '/assets/img/'
 description:
-main-class: "python"
-color: "#EB7728"
-tags:
+categories:
 - python
 - tuple
-categories:
-twitter_text:
-introduction:
+
 ---
 
 **Tuple** is a type of list which can't be changed.
